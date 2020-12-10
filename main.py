@@ -2,11 +2,10 @@ import tkinter as tk
 from tkinter import *
 from pytube import YouTube 
 from tkinter import messagebox, filedialog 
-  
+import os 
   
 # Defining CreateWidgets() function 
 # to create necessary tkinter widgets 
-
 
 def Widgets(): 
     link_label = Label(root,  
@@ -106,7 +105,9 @@ def Download():
   
 # Creating object of tk class 
 root = tk.Tk() 
-root.iconbitmap('icon.ico')  
+root.iconbitmap('icon.ico')
+#imgicon = PhotoImage(file=os.path.join(r'youtube.png'))
+root.tk.call('wm', 'iconphoto', root._w, imgicon) 
 # Setting the title, background color  
 # and size of the tkinter window and  
 # disabling the resizing property 
