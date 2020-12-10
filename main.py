@@ -9,7 +9,7 @@ import os
 
 def Widgets(): 
     link_label = Label(root,  
-                       text="YouTube link  :", 
+                       text="YouTube 連結  :", 
                        bg="#E8D579") 
     link_label.grid(row=1, 
                     column=0, 
@@ -26,7 +26,7 @@ def Widgets():
                        columnspan = 2) 
    
     destination_label = Label(root,  
-                              text="Destination    :", 
+                              text="      儲存位置    :  ", 
                               bg="#E8D579") 
     destination_label.grid(row=2, 
                            column=0, 
@@ -42,7 +42,7 @@ def Widgets():
                               padx=5) 
    
     browse_B = Button(root,  
-                      text="Browse", 
+                      text="瀏覽", 
                       command=Browse, 
                       width=10, 
                       bg="#05E8E0") 
@@ -52,7 +52,7 @@ def Widgets():
                   padx=1) 
    
     Download_B = Button(root, 
-                        text="Download",  
+                        text="下載",  
                         command=Download,  
                         width=20, 
                         bg="#05E8E0") 
@@ -99,21 +99,21 @@ def Download():
     videoStream.download(download_Folder) 
    
     # Displaying the message 
-    messagebox.showinfo("SUCCESSFULLY",  
-                        "DOWNLOADED AND SAVED IN\n" 
+    messagebox.showinfo("下載成功！",  
+                        "已下載並儲存於\n" 
                         + download_Folder) 
   
 # Creating object of tk class 
 root = tk.Tk() 
-root.iconbitmap('icon.ico')
+#root.iconbitmap('icon.ico')
 #imgicon = PhotoImage(file=os.path.join(r'youtube.png'))
-root.tk.call('wm', 'iconphoto', root._w, imgicon) 
+#root.tk.call('wm', 'iconphoto', root._w, imgicon) 
 # Setting the title, background color  
 # and size of the tkinter window and  
 # disabling the resizing property 
 root.geometry("600x120") 
 root.resizable(False, False) 
-root.title("YouTube_Video_Downloader") 
+root.title("YouTube MP4 下載器") 
 root.config(background="#000000") 
    
 # Creating the tkinter Variables 
